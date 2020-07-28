@@ -12,4 +12,8 @@ public interface TodoServices {
 
 	Todo getOneTodo(Long id);
 
+	void createTodo(Todo todo);
+
+	void updateTodo(Todo todo);
+
 }

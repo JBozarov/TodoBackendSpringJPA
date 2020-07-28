@@ -31,6 +31,17 @@ public class TodoServiceImplementation implements TodoServices {
 		Optional<Todo> optionalTodo = todoRepository.findById(id); 
 		Todo todo = optionalTodo.get(); 
 		return null;
+	}
+
+	@Override
+	public void createTodo(Todo todo) {
+		todoRepository.save(todo); 
+	}
+
+	@Override
+	public void updateTodo(Todo todo) {
+		ArrayList<Todo> todos = todoRepository
+		
 	} 
 	
 	
