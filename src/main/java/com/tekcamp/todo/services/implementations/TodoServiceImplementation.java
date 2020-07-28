@@ -40,8 +40,12 @@ public class TodoServiceImplementation implements TodoServices {
 
 	@Override
 	public void updateTodo(Todo todo) {
-		ArrayList<Todo> todos = todoRepository
-		
+		ArrayList<Todo> todos = (ArrayList<Todo>) todoRepository.findAll(); 
+		for (int i = 0; i<todos.size(); i++ ) {
+			if (todos.get(i).getId() == todo.getId()) {
+				todoRepository.save(todo); 
+			}
+		}
 	} 
 	
 	
