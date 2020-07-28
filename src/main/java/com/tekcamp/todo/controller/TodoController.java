@@ -2,6 +2,7 @@ package com.tekcamp.todo.controller;
 
 import java.util.List;
 
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -48,6 +49,9 @@ public class TodoController {
 		todoServices.updateTodo(todo); 
 	}
 	
-	
+	@DeleteMapping(path="/{id}")
+	public void deleteTodo(@PathVariable Long id) {
+		todoServices.deleteTodo(id); 
+	}
 	
 }
